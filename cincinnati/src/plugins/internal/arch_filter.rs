@@ -14,7 +14,7 @@ use self::cincinnati::plugins::prelude_plugin_impl::*;
 use commons::GraphError;
 use lazy_static::lazy_static;
 
-pub static DEFAULT_KEY_FILTER: &str = "io.openshift.upgrades.graph";
+pub static DEFAULT_KEY_FILTER: &str = "graph";
 pub static DEFAULT_ARCH_KEY: &str = "release.arch";
 pub static DEFAULT_DEFAULT_ARCH: &str = "amd64";
 pub static DEFAULT_DEFAULT_ARCH_THRESHOLD_VERSION: &str = "4.2.0-rc.0";

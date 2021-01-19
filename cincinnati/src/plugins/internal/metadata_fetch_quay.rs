@@ -9,7 +9,7 @@ use crate as cincinnati;
 use self::cincinnati::plugins::prelude::*;
 use self::cincinnati::plugins::prelude_plugin_impl::*;
 
-pub static DEFAULT_QUAY_LABEL_FILTER: &str = "io.openshift.upgrades.graph";
+pub static DEFAULT_QUAY_LABEL_FILTER: &str = "graph";
 pub static DEFAULT_QUAY_MANIFESTREF_KEY: &str = "graph.release.manifestref";
 pub static DEFAULT_QUAY_REPOSITORY: &str = "openshift";
 
@@ -215,7 +215,7 @@ mod tests_net {
                                 .to_string(),
                         ),
                         (
-                            String::from("io.openshift.upgrades.graph.previous.remove"),
+                            String::from("graph.previous.remove"),
                             String::from("0.0.0"),
                         ),
                     ]
@@ -244,7 +244,7 @@ mod tests_net {
                                 .to_string(),
                         ),
                         (
-                            String::from("io.openshift.upgrades.graph.release.remove"),
+                            String::from("graph.release.remove"),
                             String::from("true"),
                         ),
                     ]
@@ -273,7 +273,7 @@ mod tests_net {
                                 .to_string(),
                         ),
                         (
-                            String::from("io.openshift.upgrades.graph.previous.add"),
+                            String::from("graph.previous.add"),
                             String::from("0.0.1,0.0.0"),
                         ),
                     ]

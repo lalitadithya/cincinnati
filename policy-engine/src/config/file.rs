@@ -170,7 +170,7 @@ mod tests {
 
         let expected: Vec<BoxedPlugin> =
             cincinnati::new_plugins!(InternalPluginWrapper(ChannelFilterPlugin {
-                key_prefix: String::from("io.openshift.upgrades.graph"),
+                key_prefix: String::from("graph"),
                 key_suffix: String::from("release.channels"),
             }));
         let mut settings = AppSettings::default();
@@ -181,7 +181,7 @@ mod tests {
             let sample_config = r#"
                 [[policy]]
                 name = "channel-filter"
-                key_prefix = "io.openshift.upgrades.graph"
+                key_prefix = "graph"
                 key_suffix = "release.channels"
             "#;
 

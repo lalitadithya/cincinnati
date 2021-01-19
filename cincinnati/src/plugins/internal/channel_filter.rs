@@ -10,7 +10,7 @@ use self::cincinnati::plugins::prelude_plugin_impl::*;
 use commons::GraphError;
 use lazy_static::lazy_static;
 
-static DEFAULT_KEY_FILTER: &str = "io.openshift.upgrades.graph";
+static DEFAULT_KEY_FILTER: &str = "graph";
 static DEFAULT_CHANNEL_KEY: &str = "release.channels";
 
 #[derive(Clone, Debug, Deserialize, SmartDefault)]

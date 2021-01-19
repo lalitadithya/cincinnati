@@ -6,7 +6,7 @@ use self::cincinnati::plugins::prelude_plugin_impl::*;
 
 use std::collections::HashSet;
 
-pub static DEFAULT_KEY_FILTER: &str = "io.openshift.upgrades.graph";
+pub static DEFAULT_KEY_FILTER: &str = "graph";
 static SUPPORTED_VERSIONS: &[&str] = &["1.0.0"];
 
 pub mod graph_data_model {
@@ -695,8 +695,8 @@ mod tests {
             graph_result,
             cincinnati::testing::CompareGraphsVerboseSettings {
                 unwanted_metadata_keys: &[
-                    "io.openshift.upgrades.graph.previous.remove_regex",
-                    "io.openshift.upgrades.graph.previous.remove",
+                    "graph.previous.remove_regex",
+                    "graph.previous.remove",
                 ],
 
                 ..Default::default()

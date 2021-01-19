@@ -59,8 +59,8 @@ fn e2e_channel_success(channel: &'static str, arch: &'static str) {
         actual,
         cincinnati::testing::CompareGraphsVerboseSettings {
             unwanted_metadata_keys: &[
-                "io.openshift.upgrades.graph.previous.remove_regex",
-                "io.openshift.upgrades.graph.previous.remove",
+                "graph.previous.remove_regex",
+                "graph.previous.remove",
             ],
 
             ..Default::default()

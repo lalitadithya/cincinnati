@@ -399,7 +399,7 @@ async fn lookup_or_fetch(
                     // Attach the architecture for later processing
                     metadata
                         .metadata
-                        .insert("io.openshift.upgrades.graph.release.arch".to_owned(), arch);
+                        .insert("graph.release.arch".to_owned(), arch);
                 };
 
                 metadata

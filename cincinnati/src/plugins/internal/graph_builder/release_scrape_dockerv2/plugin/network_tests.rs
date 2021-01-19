@@ -88,10 +88,10 @@ fn scrape_private_with_credentials_must_succeed() -> Fallible<()> {
         cincinnati::testing::CompareGraphsVerboseSettings {
             unwanted_metadata_keys: &[
                 DEFAULT_MANIFESTREF_KEY,
-                "io.openshift.upgrades.graph.release.channels",
-                "io.openshift.upgrades.graph.previous.add",
-                "io.openshift.upgrades.graph.previous.remove",
-                "io.openshift.upgrades.graph.release.arch",
+                "graph.release.channels",
+                "graph.previous.add",
+                "graph.previous.remove",
+                "graph.release.arch",
             ],
 
             payload_replace_sha_by_tag_left: false,
@@ -245,10 +245,10 @@ fn scrape_public_with_first_empty_tag_must_succeed() -> Fallible<()> {
         cincinnati::testing::CompareGraphsVerboseSettings {
             unwanted_metadata_keys: &[
                 DEFAULT_MANIFESTREF_KEY,
-                "io.openshift.upgrades.graph.release.channels",
-                "io.openshift.upgrades.graph.previous.add",
-                "io.openshift.upgrades.graph.previous.remove",
-                "io.openshift.upgrades.graph.release.arch",
+                "graph.release.channels",
+                "graph.previous.add",
+                "graph.previous.remove",
+                "graph.release.arch",
             ],
 
             payload_replace_sha_by_tag_left: false,
@@ -334,10 +334,10 @@ fn scrape_public_must_succeed_with_various_registry_urls(registry: &str) {
         cincinnati::testing::CompareGraphsVerboseSettings {
             unwanted_metadata_keys: &[
                 DEFAULT_MANIFESTREF_KEY,
-                "io.openshift.upgrades.graph.release.channels",
-                "io.openshift.upgrades.graph.previous.add",
-                "io.openshift.upgrades.graph.previous.remove",
-                "io.openshift.upgrades.graph.release.arch",
+                "graph.release.channels",
+                "graph.previous.add",
+                "graph.previous.remove",
+                "graph.release.arch",
             ],
 
             payload_replace_sha_by_tag_left: false,
@@ -492,10 +492,10 @@ fn scrape_public_multiarch_manual_succeeds() -> Fallible<()> {
         cincinnati::testing::CompareGraphsVerboseSettings {
             unwanted_metadata_keys: &[
                 DEFAULT_MANIFESTREF_KEY,
-                "io.openshift.upgrades.graph.release.channels",
-                "io.openshift.upgrades.graph.previous.add",
-                "io.openshift.upgrades.graph.previous.remove",
-                "io.openshift.upgrades.graph.release.arch",
+                "graph.release.channels",
+                "graph.previous.add",
+                "graph.previous.remove",
+                "graph.release.arch",
             ],
 
             payload_replace_sha_by_tag_left: false,

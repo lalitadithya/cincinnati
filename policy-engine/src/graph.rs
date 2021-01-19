@@ -165,7 +165,7 @@ pub(crate) mod tests {
         let plugins = cincinnati::plugins::catalog::build_plugins(
             &[plugin_config!(
                 ("name", "channel-filter"),
-                ("key_prefix", "io.openshift.upgrades.graph"),
+                ("key_prefix", "graph"),
                 ("key_suffix", "release.channels")
             )?],
             None,

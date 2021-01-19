@@ -5,7 +5,7 @@ use crate as cincinnati;
 use self::cincinnati::plugins::prelude::*;
 use self::cincinnati::plugins::prelude_plugin_impl::*;
 
-pub static DEFAULT_KEY_FILTER: &str = "io.openshift.upgrades.graph";
+pub static DEFAULT_KEY_FILTER: &str = "graph";
 pub static DEFAULT_REMOVE_ALL_EDGES_VALUE: &str = "*";
 
 #[derive(Clone, Debug, Deserialize, SmartDefault)]
@@ -317,7 +317,7 @@ fn try_annotate_semver_build(
 ) -> Fallible<String> {
     let version = if let Some(arch) = graph
         .get_metadata_as_ref_mut(arch_reference)?
-        .get("io.openshift.upgrades.graph.release.arch")
+        .get("graph.release.arch")
     {
         let mut version = semver::Version::parse(version)?;
         version.build = vec![semver::Identifier::AlphaNumeric(arch.to_string())];
@@ -806,7 +806,7 @@ mod tests {
         let mut runtime = init_runtime()?;
 
         lazy_static::lazy_static! {
-            static ref TEST_KEY_PREFIX: &'static str = "io.openshift.upgrades.graph";
+            static ref TEST_KEY_PREFIX: &'static str = "graph";
             static ref PLUGINS: Vec<BoxedPlugin> = vec![
                 Box::new(InternalPluginWrapper(EdgeAddRemovePlugin {
                     key_prefix: TEST_KEY_PREFIX.to_string(),

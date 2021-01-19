@@ -6,7 +6,7 @@ use self::cincinnati::plugins::prelude::*;
 use self::cincinnati::plugins::prelude_plugin_impl::*;
 
 /// Prefix for the metadata key operations.
-pub static DEFAULT_KEY_FILTER: &str = "io.openshift.upgrades.graph";
+pub static DEFAULT_KEY_FILTER: &str = "graph";
 
 #[derive(Clone, Debug, Deserialize, SmartDefault)]
 #[serde(default)]
