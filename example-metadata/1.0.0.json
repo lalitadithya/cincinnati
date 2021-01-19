@@ -1,0 +1,9 @@
+{
+	"kind": "cincinnati-metadata-v0",
+	"version": "1.0.0",
+	"previous": [],
+	"metadata": {
+        "graph.release.channels": "stable",
+		"kind": "release"
+	}
+}
