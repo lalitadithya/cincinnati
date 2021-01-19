@@ -128,7 +128,6 @@ impl AppSettings {
     }
 
     fn default_openshift_plugin_settings(&self) -> Fallible<Vec<Box<dyn PluginSettings>>> {
-        use cincinnati::plugins::internal::github_openshift_secondary_metadata_scraper::GITHUB_SCRAPER_TOKEN_PATH_ENV;
         use cincinnati::plugins::prelude::*;
 
         lazy_static! {
@@ -158,30 +157,6 @@ impl AppSettings {
                     .map(|path| format!("\ncredentials_path = {:?}", path))
                     .unwrap_or_default()
             ))?)?,
-            GithubOpenshiftSecondaryMetadataScraperSettings::deserialize_config(toml::from_str(
-                &format!(
-                    r#"
-                        github_org = "openshift"
-                        github_repo = "cincinnati-graph-data"
-                        branch = "master"
-                        output_directory = {:?}
-                        {}
-                    "#,
-                    &GRAPH_DATA_DIR.path(),
-                    std::env::var(GITHUB_SCRAPER_TOKEN_PATH_ENV)
-                        .map(|path| format!("oauth_token_path = {:?}", path))
-                        .unwrap_or_default()
-                ),
-            )?)?,
-            OpenshiftSecondaryMetadataParserSettings::deserialize_config(
-                toml::from_str(&format!(
-                    r#"
-                        data_directory = {:?}
-                    "#,
-                    &GRAPH_DATA_DIR.path(),
-                ))
-                .context("Parsing config string to settings")?,
-            )?,
             plugin_config!(("name", EdgeAddRemovePlugin::PLUGIN_NAME))?,
         ];
 
