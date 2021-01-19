@@ -14,7 +14,7 @@ pub static DEFAULT_SCRAPE_REGISTRY: &str = "quay.io";
 pub static DEFAULT_SCRAPE_REPOSITORY: &str = "openshift-release-dev/ocp-release";
 
 /// Default key for storing and retrieving the manifest reference from the metadata.
-pub static DEFAULT_MANIFESTREF_KEY: &str = "io.openshift.upgrades.graph.release.manifestref";
+pub static DEFAULT_MANIFESTREF_KEY: &str = "graph.release.manifestref";
 
 /// Default fetch concurrency.
 pub static DEFAULT_FETCH_CONCURRENCY: usize = 16;

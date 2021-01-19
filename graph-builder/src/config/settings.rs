@@ -25,7 +25,7 @@ pub struct AppSettings {
     pub mandatory_client_parameters: HashSet<String>,
 
     /// Metadata key where to record the manifest-reference.
-    #[default("io.openshift.upgrades.graph.release.manifestref")]
+    #[default("graph.release.manifestref")]
     pub manifestref_key: String,
 
     /// Endpoints namespace for the main service.
